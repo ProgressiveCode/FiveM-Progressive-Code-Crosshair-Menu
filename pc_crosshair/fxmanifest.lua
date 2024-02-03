@@ -6,10 +6,6 @@ fx_version 'adamant'
 game 'gta5'
 --
 
--- Lua 54 
-lua54 'yes'
---
-
 -- Description
 description 'Progressive Code Crosshair Menu'
 --
@@ -40,8 +36,4 @@ files {
 
 	'Html/Js/Crosshair.js',
 }
---
-
--- Ignore Escrow Files
-escrow_ignore 'Config/Main.lua'
 --
