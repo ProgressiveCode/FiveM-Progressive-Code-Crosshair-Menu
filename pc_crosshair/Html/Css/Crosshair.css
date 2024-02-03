@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "Bebas Nue";
+    
+	src: url("../Webfonts/BebasNeuePro-Bold.ttf") format("truetype");
+    
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    
+	font-style: normal;
+    
+	font-weight: 400;
+    
+	src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	
+	background:transparent;
+	
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+   
+	background: transparent;
+	
+	background-size:cover;
+	
+	-moz-user-select: none;
+	
+	-khtml-user-select: none;
+	
+	-webkit-user-select: none;
+	
+	-ms-user-select: none;
+	
+	user-select: none;
+	
+	z-index:9999;
+	
+	overflow:hidden
+}
+
+.center {
+	position: fixed;
+  
+	top: 50%;
+    
+	left: 50%;
+	
+	transform: translate(-50%, -50%);
+	
+	height: 0.5%;
+	
+	width: 0.2%;
+}
+
+#type {
+	display: none;
+	
+	position: fixed;
+	
+	top: 50%;
+	
+	left: 50%;
+	
+	transform: translate(-50%, -50%);
+	
+	width: 32px;
+}
+
+#wrap {
+	display: block;
+
+	background:transparent;
+
+	position: absolute;
+
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+
+	overflow: hidden;
+
+	width: 100%;
+
+	height:100%;
+
+	top:0;
+
+	left:0;
+}
+
+#crosshair-menu {
+	background:linear-gradient(0deg,#242424,#242424),linear-gradient(0deg,rgba(255,255,255,.1),rgba(255,255,255,.1));
+	
+	position:absolute;
+		
+	width:20.0vw;
+	
+	min-width:15vw;
+	
+	max-width:90%;
+	
+	height:31.1vw;
+	
+	min-height:16vw;
+	
+	max-height:62%;
+	
+	top:15%;
+	
+	left:1vw;
+	
+	border:1px solid rgba(255,255,255,.1);
+	
+	box-shadow:0 0 2vw rgba(28,26,36,1);
+		
+	overflow: hidden;
+	
+	animation:bounceInDown 1.5s 1;
+}
+
+#title {
+	background:rgba(255,255,255,0.02);
+	
+	border-bottom:0.05vw solid rgba(255,255,255,0.05);
+	
+	width:auto;
+	
+	height:3vw;
+	
+	line-height:3vw;
+	
+	font-size:1vw;
+	
+	font-weight:300;
+	
+	text-align:left;
+	
+	padding-left:1vw;
+	
+	color:rgba(255,255,255,1);
+	
+	position:relative;
+}
+
+#title-buttons {
+	width:50%;
+	
+	height:100%;
+	
+	line-height:2.8vw;
+	
+	float:right;
+	
+	position:relative;
+	
+	text-align:right;
+}
+
+#btn-close {
+	background:rgba(255,60,60,1);
+	
+	width:1.2vw;
+	
+	height:1.2vw;
+	
+	line-height:1.2vw;
+	
+	font-size:0.6vw;
+		
+	color:rgba(255,255,255,1);
+	
+	border:none;
+	
+	outline:none;
+	
+	cursor:pointer;
+	
+	margin-right:0.7vw;
+	
+	transition:0.3s;
+}
+
+#btn-close:hover { background:rgba(255,70,70,1);box-shadow:0 0 1vw rgba(255,60,60,0.7) }
+
+#crosshair-list {
+	width:auto;
+	
+	height:100%;
+	
+	margin-right:0.3vw;
+	
+	padding:0.4vw 0 0.5vw 0.4vw;
+	
+	position:absolute;
+	
+	z-index:1;
+	
+	color:rgba(255,255,255,1);
+	
+	text-align:left;
+}
+
+#crosshair-scrollable {
+	width:100%;
+
+	height:87%;
+
+	overflow-y:scroll;
+}
+
+.crosshair {
+	width:2.5vw;
+	
+	height:2.5vw;
+	
+	position:relative;
+	
+	cursor:pointer;
+	
+	background:rgba(255,255,255,0.02);
+	
+	border:1px solid rgba(255,255,255,0.05);
+	
+	transition:0.3s;
+	
+	outline:none;
+	
+	margin:0.1vw 0.10vw;	
+}
+
+.crosshair:hover, .active-crosshair { border:0.05vw solid rgb(30, 181, 105); filter: drop-shadow(0 0 0.5vw rgb(30, 181, 105)); }
+
+.active-crosshair::before {
+	position:absolute;
+	
+	top:0.2vw;
+	
+	right:0.2vw;
+	
+	font-size:0.6vw;
+	
+	color:rgba(50,235,100,1);
+	
+	text-shadow:0 0 0.8vw rgba(0,255,0,1);
+	
+	display: inline-block;
+	
+	font-style: normal;
+	
+	font-variant: normal;
+	
+	text-rendering: auto;
+	
+	-webkit-font-smoothing: antialiased;
+	
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	
+	font-weight: 300;
+}
+
+.crosshair img {
+	width:1.5vw;
+	
+	position:absolute;
+	
+	left:50%;
+	
+	transform:translate(-50%,-50%);
+}
+
+.crosshair span {
+	position:absolute;
+	
+	left:0;
+	
+	bottom:0.2vw;
+	
+	width:100%;
+	
+	position:absolute;
+	
+	color:rgba(255,255,255,0.8);
+	
+	font-size:0.5vw;
+	
+	text-align:center;
+	
+	font-family:Bebas Nue;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+	background: rgba(255,255,255,0);
+	
+	border: none;
+	
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+	width: 0.2vw;
+	
+	height: 0.4vw;
+	
+	background-color: transparent;
+	
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+	background: rgba(30, 181, 105,1);
+	
+	border: 0.1vw solid rgba(30, 181, 105,1);
+	
+	border-radius:0.5vw;
+}
